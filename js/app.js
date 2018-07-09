@@ -1,4 +1,4 @@
-function createTodoItem(title) {
+function createTodoItem(title) { 
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.className = 'checkbox';
@@ -22,13 +22,13 @@ function createTodoItem(title) {
     const listItem = document.createElement('li');
     listItem.className ='todo-item';
 
-    listItem.appendChild(checkbox);
-    listItem.appendChild(label);
-    listItem.appendChild(editInput);
-    listItem.appendChild(editButton);
-    listItem.appendChild(deleteButton);
+    listItem.appendChild(checkbox); //вставляем в конец элемента переданный элемент
+    listItem.appendChild(label); 
+    listItem.appendChild(editInput); 
+    listItem.appendChild(editButton); 
+    listItem.appendChild(deleteButton); 
 
-    bindEvents(listItem);
+    bindEvents(listItem); //возвращает функцию-обёртку и привязывает к контексту
 
     return listItem;
 }
@@ -59,14 +59,14 @@ function addTodoItem(event) {
 
 
 
-function toggleTodoItem() {
-   const listItem = this.parentNode;
+function toggleTodoItem() { //ф-я переключения
+   const listItem = this.parentNode; 
    listItem.classList.toggle('completed');
 
 
 }
 
-function editTodoItem() {
+function editTodoItem() { 
     const listItem = this.parentNode;
     const title = listItem.querySelector('.title');
     const editInput = listItem.querySelector('.textfield');
@@ -85,9 +85,9 @@ function editTodoItem() {
 
 }
 
-function deleteTodoItem() {
+function deleteTodoItem() { 
     const listItem = this.parentNode;
-    todoList.removeChild(listItem);
+    todoList.removeChild(listItem); // Удаление элемента с известным родителем
 }
 
 const todoForm = document.getElementById('todo-form');
@@ -96,8 +96,8 @@ const todoList = document.getElementById('todo-list');
 const todoItems = document.querySelectorAll('.todo-item');
 
 function main() {
-    todoForm.addEventListener('submit', addTodoItem);
-    todoItems.forEach(item => bindEvents(item));
+    todoForm.addEventListener('submit', addTodoItem); //обработчик событий при нажатии Submit
+    todoItems.forEach(item => bindEvents(item)); // forEach метод для перебора массива, с помощью данной стрелочной функцией передаем обновленный контекст в Item
 }
 
 main();
