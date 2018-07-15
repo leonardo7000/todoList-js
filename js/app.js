@@ -59,7 +59,7 @@ function addTodoItem(event) {
 
 
 
-function toggleTodoItem() { //ф-я переключения
+function toggleTodoItem() { //функция переключения
    const listItem = this.parentNode; 
    listItem.classList.toggle('completed');
 
