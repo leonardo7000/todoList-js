@@ -4,30 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
     <title>ToDo_Js</title>
 </head>
 <body>
-    <main id="app">
-        <header>
-            <h1>Todo.js</h1>
-        </header>
 
-        <ul id="todo-list">
-            <li class="todo-item">
-                <input class="checkbox" type="checkbox" >
-                <label class="title">Изучить JavaScript</label>
-                <input class="textfield" type="text" >
-                <button class="edit">Изменить</button>
-                <button class="delete">Удалить</button>
-            </li>
-        </ul>
+<div class="card text-center">
 
-        <form id="todo-form">
-            <input id="add-input" type="text">
-            <button id="add-button" type="submit">Добавить</button>
-        </form>
-    </main>
+    <div class="card-body">
+
+
+        <main id="app">
+            <header>
+                <h1>Todo.js</h1>
+            </header>
+
+
+            <ul id="todo-list">
+                <li class="todo-item">
+                    <input class="checkbox" type="checkbox" >
+                    <label class="title">Изучить JavaScript</label>
+                    <input class="textfield" type="text" >
+                    <button class="edit">Изменить</button>
+                    <button class="delete">Удалить</button>
+                </li>
+            </ul>
+
+            <form id="todo-form">
+                <input id="add-input" type="text">
+                <select id="mySelect" size="1">
+                    <option id="user1">Artem</option>
+                    <option id="user2">Genadiy</option>
+                    <option id="user3">Sergey</option>
+                </select>
+                <button id="add-button" type="submit">Добавить</button>
+            </form>
+        </main>
+
+
+
+
+    </div>
+
+</div>
 
     <script src="js/app.js"></script>
+    <script src="bootstrap.min.js"></script>
 </body>
 </html>

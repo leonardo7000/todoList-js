@@ -81,7 +81,7 @@ input {
 
 main {
     background: #fff;
-    max-width: 50em;
+    width: 700px;
     margin: 70px auto;
     border-radius: 2px;
     overflow: hidden;
